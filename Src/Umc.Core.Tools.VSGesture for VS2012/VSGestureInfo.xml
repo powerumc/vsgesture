@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VSGestureInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://tempuri.org/VSGestureInfo.xsd">
+  <UserSettings>
+    <LineColor>255,0,0</LineColor>
+    <LineThickness>Thickness5</LineThickness>
+    <EnableVSGesture>true</EnableVSGesture>
+	<EnableVSGestureAlram>true</EnableVSGestureAlram>
+  </UserSettings>
+  <GestureActionMapper>
+    <Gesture GestureActionType="DownRight" ActionType="Command" GestureItemName="File.Close" />
+    <Gesture GestureActionType="ScratchOut" ActionType="Command" GestureItemName="Window.CloseAllDocuments" />
+    <Gesture GestureActionType="Up" ActionType="Command" GestureItemName="Goto.First.Line" />
+    <Gesture GestureActionType="Down" ActionType="Command" GestureItemName="Goto.Last.Line" />
+    <Gesture GestureActionType="Circle" ActionType="Command" GestureItemName="Build.BuildSelection" />
+    <Gesture GestureActionType="DoubleCircle" ActionType="Command" GestureItemName="Build.BuildSolution" />
+    <Gesture GestureActionType="Right" ActionType="Action" GestureItemName="RightGestureExecuteCommand" />
+    <Gesture GestureActionType="UpRight" ActionType="Command" GestureItemName="Debug.Startnewinstance" />
+    <Gesture GestureActionType="UpRightLong" ActionType="Command" GestureItemName="Debug.Startnewinstance" />
+    <Gesture GestureActionType="Left" ActionType="Action" GestureItemName="LeftGestureExecuteCommand" />
+  </GestureActionMapper>
+</VSGestureInfo>

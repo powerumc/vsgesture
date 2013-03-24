@@ -1,0 +1,40 @@
+﻿<UserControl x:Class="Umc.Core.Tools.VSGesture.OptionPages.OptionPageMouseActionControlWPF"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:sys="clr-namespace:System;assembly=mscorlib"
+	xmlns:actionItems="clr-namespace:Umc.Core.Tools.VSGesture.Actions"
+	xmlns:gestureService="clr-namespace:Umc.Core.Tools.VSGesture.Services"
+	xmlns:control="clr-namespace:Umc.Core.Tools.VSGesture.Controls"
+	xmlns:option="clr-namespace:Umc.Core.Tools.VSGesture.OptionPages"
+    Height="300" Width="300">
+	<UserControl.Resources>
+		<ObjectDataProvider x:Key="MouseAction"
+							ObjectType="{x:Type sys:Enum}"
+							MethodName="GetValues">
+			<ObjectDataProvider.MethodParameters>
+				<x:Type TypeName="actionItems:GestureActionMapperItems" />
+			</ObjectDataProvider.MethodParameters>
+		</ObjectDataProvider>
+		<ObjectDataProvider x:Key="gestureService" ObjectType="{x:Type gestureService:VSGestureService}"/>
+		<option:GestureSeleectedValueConverter x:Key="gestureConverter" />
+		<DataTemplate x:Key="template1">
+			<TextBlock x:Name="txtGesture" Text="{Binding}"></TextBlock>
+		</DataTemplate>
+		<DataTemplate x:Key="template2">
+			<!--<ComboBox ItemsSource="{Binding Source={StaticResource gestureService}}"/>-->
+			<!--<ComboBox ItemsSource="{Binding Path=GestureActionList.GestureItem, Source={x:Static gestureService:VSGestureService.Current}}"
+					  DisplayMemberPath="Caption"
+					  SelectedValuePath="Name"/>-->
+		</DataTemplate>
+	</UserControl.Resources>
+    <Grid>
+		<ListView x:Name="lvGestureOption" ItemsSource="{Binding Source={StaticResource MouseAction}}">
+			<ListView.View>
+				<GridView>
+					<GridViewColumn Header="Mouse Gestures" Width="150" CellTemplate="{StaticResource template1}" />
+					<GridViewColumn Header="Actions" Width="250"  CellTemplate="{StaticResource template2}" />
+				</GridView>
+			</ListView.View>
+		</ListView>
+	</Grid>
+</UserControl>

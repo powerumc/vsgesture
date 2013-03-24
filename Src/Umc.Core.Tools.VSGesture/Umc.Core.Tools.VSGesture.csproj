@@ -1,0 +1,308 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Umc.Core.Tools.VSGesture</RootNamespace>
+    <AssemblyName>Umc.Core.Tools.VSGesture</AssemblyName>
+    <SignAssembly>False</SignAssembly>
+    <AssemblyOriginatorKeyFile>Key.snk</AssemblyOriginatorKeyFile>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <ProjectGuid>{31B3E3C9-271D-4DE4-B043-8A450AC534FC}</ProjectGuid>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\PublicAssemblies\EnvDTE.dll</HintPath>
+    </Reference>
+    <Reference Include="EnvDTE80, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\PublicAssemblies\EnvDTE80.dll</HintPath>
+    </Reference>
+    <Reference Include="IACOM, Version=0.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files\Microsoft SDKs\Windows\v6.0A\bin\IACOM.dll</HintPath>
+    </Reference>
+    <Reference Include="IACore, Version=1.7.6223.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files\Reference Assemblies\Microsoft\Tablet PC\v1.7\IACore.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IALoader, Version=1.7.6223.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files\Microsoft SDKs\Windows\v6.0A\bin\IALoader.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IAWinFX, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files\Reference Assemblies\Microsoft\Tablet PC\v1.7\IAWinFX.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Ink.Analysis, Version=1.7.6223.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files\Reference Assemblies\Microsoft\Tablet PC\v1.7\Microsoft.Ink.Analysis.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.OLE.Interop" />
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop" />
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop.8.0" />
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop.9.0" />
+    <Reference Include="Microsoft.VisualStudio.TextManager.Interop" />
+    <Reference Include="Microsoft.VisualStudio.Shell.9.0" />
+    <Reference Include="PresentationCore">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationFramework">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WindowsBase">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsFormsIntegration">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Actions\ActionCommand.cs" />
+    <Compile Include="Actions\ActionCommandFactory.cs" />
+    <Compile Include="Actions\ExecuteCommand.cs" />
+    <Compile Include="Actions\ExecuteCustomCommand.cs" />
+    <Compile Include="Actions\GestureActionList%28partial%29.cs" />
+    <Compile Include="Actions\GestureActionList.cs">
+      <DependentUpon>GestureActionList.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Actions\VSGestureInfo%28partial%29.cs" />
+    <Compile Include="Actions\IExecuteCommand.cs" />
+    <Compile Include="Actions\Custom\LeftGestureExecuteCommand.cs" />
+    <Compile Include="Actions\Custom\RightGestureExecuteCommand.cs" />
+    <Compile Include="Actions\TempGestureActionMapper.cs" />
+    <Compile Include="Actions\IActionCommand.cs" />
+    <Compile Include="Actions\VSGestureInfo.cs">
+      <DependentUpon>VSGestureInfo.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ColorPicker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\frmWelcome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\frmWelcome.Designer.cs">
+      <DependentUpon>frmWelcome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\LineWeightPicker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\ListViewEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\PickerBase.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ImageResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ImageResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="OptionPages\GestureSeleectedValueConverter.cs" />
+    <Compile Include="OptionPages\OptionPageAbout.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="OptionPages\OptionPageAboutControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OptionPages\OptionPageAboutControl.Designer.cs">
+      <DependentUpon>OptionPageAboutControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OptionPages\OptionPageDefault.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="OptionPages\OptionPageDefaultControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OptionPages\OptionPageDefaultControl.Designer.cs">
+      <DependentUpon>OptionPageDefaultControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OptionPages\OptionPageManual.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="OptionPages\OptionPageManualControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OptionPages\OptionPageManualControl.Designer.cs">
+      <DependentUpon>OptionPageManualControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OptionPages\OptionPageMouseAction.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="OptionPages\OptionPageMouseActionControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OptionPages\OptionPageMouseActionControl.Designer.cs">
+      <DependentUpon>OptionPageMouseActionControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OptionPages\OptionPageMouseActionControlWPF.xaml.cs">
+      <DependentUpon>OptionPageMouseActionControlWPF.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Shell\CancelableMouseEventArgs.cs" />
+    <Compile Include="Shell\GestureNativeWindow.cs" />
+    <Compile Include="Shell\RunningDocEventImpl.cs" />
+    <Compile Include="Util\DteHelper.cs" />
+    <Compile Include="Util\FileUtil.cs" />
+    <Compile Include="Util\ResourceUtil.cs" />
+    <Compile Include="VSGestureAnalyzer.cs" />
+    <Compile Include="Guids.cs" />
+    <Compile Include="Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PkgCmdID.cs" />
+    <Compile Include="Services\IVSGestureService.cs" />
+    <Compile Include="Services\VSGestureService.cs" />
+    <Compile Include="Shell\VsNativeWindow.cs" />
+    <Compile Include="Shell\MENUITEMINFO.cs" />
+    <Compile Include="Shell\NativeMethods.cs" />
+    <Compile Include="Shell\RECT.cs" />
+    <Compile Include="Shell\SCROLLINFO.cs" />
+    <Compile Include="Shell\SHFILEINFO.cs" />
+    <Compile Include="Shell\Structs.cs" />
+    <Compile Include="Shell\TV_ITEM.cs" />
+    <Compile Include="VSGestureInstaller.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="VSGesturePackage.cs" />
+    <Compile Include="VSPackage.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VSPackage.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VSPackage.resx">
+      <MergeWithCTO>true</MergeWithCTO>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>VSPackage.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <VSCTCompile Include="VSGesture.vsct">
+      <ResourceName>1000</ResourceName>
+    </VSCTCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Actions\VSGestureInfo.xsd" />
+    <EmbeddedResource Include="Actions\GestureActionMapperItems.xsd" />
+    <EmbeddedResource Include="OptionPages\OptionPageDefaultControl.resx">
+      <DependentUpon>OptionPageDefaultControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptionPages\OptionPageMouseActionControl.resx">
+      <DependentUpon>OptionPageMouseActionControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Actions\GestureActionList.xsd" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Key.snk" />
+    <None Include="Resources\Images_32bit.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Actions\GestureActionList.xml" />
+    <EmbeddedResource Include="Controls\frmWelcome.resx">
+      <DependentUpon>frmWelcome.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImageResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ImageResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptionPages\OptionPageAboutControl.resx">
+      <DependentUpon>OptionPageAboutControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptionPages\OptionPageManualControl.resx">
+      <DependentUpon>OptionPageManualControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Resources\DownRight.jpg" />
+    <None Include="Resources\Left.jpg" />
+    <None Include="Resources\Right.jpg" />
+    <None Include="Resources\Up.jpg" />
+    <None Include="Resources\UpRight.jpg" />
+    <None Include="Resources\Circle.jpg" />
+    <None Include="Resources\DoubleCircle.jpg" />
+    <None Include="Resources\Down.jpg" />
+    <None Include="Resources\ScratchOut.jpg" />
+    <None Include="VSGesture80.reg" />
+    <None Include="VSGesture90.reg" />
+    <None Include="Resources\Sample.jpg" />
+    <Content Include="VSGestureInfo.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Package.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="OptionPages\OptionPageMouseActionControlWPF.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <PropertyGroup>
+    <!--
+    To specify a different registry root to register your package, uncomment the TargetRegistryRoot
+    tag and specify a registry root in it.
+    <TargetRegistryRoot></TargetRegistryRoot>
+    -->
+    <RegisterOutputPackage>true</RegisterOutputPackage>
+    <RegisterWithCodebase>true</RegisterWithCodebase>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\VSSDK\Microsoft.VsSDK.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

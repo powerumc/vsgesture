@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="GestureActionMapperItems"
+    targetNamespace="http://tempuri.org/VSGestureInfo.xsd"
+    elementFormDefault="qualified"
+    xmlns="http://tempuri.org/GestureActionMapperItems.xsd"
+    xmlns:mstns="http://tempuri.org/GestureActionMapperItems.xsd"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+	<xs:simpleType name="ActionType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Action" />
+			<xs:enumeration value="Command" />
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="GestureActionMapperItems">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="ArrowDown" />
+			<xs:enumeration value="ArrowLeft" />
+			<xs:enumeration value="ArrowRight" />
+			<xs:enumeration value="ArrowUp" />
+			<xs:enumeration value="Check" />
+			<xs:enumeration value="ChevronDown" />
+			<xs:enumeration value="ChevronLeft" />
+			<xs:enumeration value="ChevronRight" />
+			<xs:enumeration value="ChevronUp" />
+			<xs:enumeration value="Circle" />
+			<xs:enumeration value="Curlicue" />
+			<xs:enumeration value="DoubleCircle" />
+			<xs:enumeration value="DoubleCurlicue" />
+			<xs:enumeration value="DoubleTap" />
+			<xs:enumeration value="Down" />
+			<xs:enumeration value="DownLeft" />
+			<xs:enumeration value="DownLeftLong" />
+			<xs:enumeration value="DownRight" />
+			<xs:enumeration value="DownRightLong" />
+			<xs:enumeration value="DownUp" />
+			<xs:enumeration value="Exclamation" />
+			<xs:enumeration value="Left" />
+			<xs:enumeration value="LeftDown" />
+			<xs:enumeration value="LeftRight" />
+			<xs:enumeration value="LeftUp" />
+			<xs:enumeration value="NoGesture" />
+			<xs:enumeration value="Right" />
+			<xs:enumeration value="RightDown" />
+			<xs:enumeration value="RightLeft" />
+			<xs:enumeration value="RightUp" />
+			<xs:enumeration value="ScratchOut" />
+			<xs:enumeration value="SemicircleLeft" />
+			<xs:enumeration value="SemicircleRight" />
+			<xs:enumeration value="Square" />
+			<xs:enumeration value="Star" />
+			<xs:enumeration value="Tap" />
+			<xs:enumeration value="Triangle" />
+			<xs:enumeration value="Up" />
+			<xs:enumeration value="UpDown" />
+			<xs:enumeration value="UpLeft" />
+			<xs:enumeration value="UpLeftLong" />
+			<xs:enumeration value="UpRight" />
+			<xs:enumeration value="UpRightLong" />
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

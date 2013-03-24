@@ -1,0 +1,68 @@
+REGEDIT4
+
+[HKEY_LOCAL_MACHINE\Software\Microsoft\VisualStudio\9.0\InstalledProducts\Umc.Core.Tools.VSGesture]
+@="#110"
+"Package"="{51335714-af65-4313-a600-f097643a1134}"
+"UseRegNameAsSplashName"=dword:00000001
+"ProductDetails"="#112"
+"PID"="1.0"
+"LogoID"="#400"
+[HKEY_LOCAL_MACHINE\Software\Microsoft\VisualStudio\9.0\Packages\{51335714-af65-4313-a600-f097643a1134}]
+@="Umc.Core.Tools.VSGesture.VSGesturePackage, Umc.Core.Tools.VSGesture, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+"InprocServer32"="[SYSTEMFOLDER]mscoree.dll"
+"Class"="Umc.Core.Tools.VSGesture.VSGesturePackage"
+"CodeBase"="[AppDataFolder]Umc.Core\\Tools\\Umc.Core.Tools.VSGesture\\Umc.Core.Tools.VSGesture.dll"
+[HKEY_LOCAL_MACHINE\Software\Microsoft\VisualStudio\9.0\AutoLoadPackages\{f1536ef8-92ec-443c-9ed7-fdadf150da82}]
+"{51335714-af65-4313-a600-f097643a1134}"=dword:00000000
+[HKEY_LOCAL_MACHINE\Software\Microsoft\VisualStudio\9.0\Packages\{51335714-af65-4313-a600-f097643a1134}]
+"ID"=dword:00000001
+"MinEdition"="Standard"
+"ProductVersion"="1.0"
+"ProductName"="Umc.Core.Tools.VSGesture"
+"CompanyName"="Umc.Core"
+[HKEY_LOCAL_MACHINE\Software\Microsoft\VisualStudio\9.0\Menus]
+"{51335714-af65-4313-a600-f097643a1134}"=", 1000, 1"
+[HKEY_LOCAL_MACHINE\Software\Microsoft\VisualStudio\9.0\ToolsOptionsPages\VSGesture]
+@="#200"
+"Package"="{51335714-af65-4313-a600-f097643a1134}"
+[HKEY_LOCAL_MACHINE\Software\Microsoft\VisualStudio\9.0\ToolsOptionsPages\VSGesture\About]
+@="#204"
+"Package"="{51335714-af65-4313-a600-f097643a1134}"
+"Page"="{68930f1c-5332-3bf9-967a-8010b228808f}"
+[HKEY_LOCAL_MACHINE\Software\Microsoft\VisualStudio\9.0\AutomationProperties\VSGesture\About]
+"Name"="VSGesture.About"
+"Package"="{51335714-af65-4313-a600-f097643a1134}"
+[HKEY_LOCAL_MACHINE\Software\Microsoft\VisualStudio\9.0\ToolsOptionsPages\VSGesture]
+@="#200"
+"Package"="{51335714-af65-4313-a600-f097643a1134}"
+[HKEY_LOCAL_MACHINE\Software\Microsoft\VisualStudio\9.0\ToolsOptionsPages\VSGesture\Default]
+@="#201"
+"Package"="{51335714-af65-4313-a600-f097643a1134}"
+"Page"="{438c6130-734f-3384-ae6b-430c4eed132c}"
+[HKEY_LOCAL_MACHINE\Software\Microsoft\VisualStudio\9.0\AutomationProperties\VSGesture\Default]
+"Name"="VSGesture.Default"
+"Package"="{51335714-af65-4313-a600-f097643a1134}"
+[HKEY_LOCAL_MACHINE\Software\Microsoft\VisualStudio\9.0\ToolsOptionsPages\VSGesture]
+@="#200"
+"Package"="{51335714-af65-4313-a600-f097643a1134}"
+[HKEY_LOCAL_MACHINE\Software\Microsoft\VisualStudio\9.0\ToolsOptionsPages\VSGesture\Manual]
+@="#203"
+"Package"="{51335714-af65-4313-a600-f097643a1134}"
+"Page"="{89b01f3c-3880-3c4d-a014-823efa848892}"
+[HKEY_LOCAL_MACHINE\Software\Microsoft\VisualStudio\9.0\AutomationProperties\VSGesture\Manual]
+"Name"="VSGesture.Manual"
+"Package"="{51335714-af65-4313-a600-f097643a1134}"
+[HKEY_LOCAL_MACHINE\Software\Microsoft\VisualStudio\9.0\ToolsOptionsPages\VSGesture]
+@="#200"
+"Package"="{51335714-af65-4313-a600-f097643a1134}"
+[HKEY_LOCAL_MACHINE\Software\Microsoft\VisualStudio\9.0\ToolsOptionsPages\VSGesture\Mouse Gesture]
+@="#202"
+"Package"="{51335714-af65-4313-a600-f097643a1134}"
+"Page"="{3274846f-92d3-3169-9a23-fee18f7c1dbb}"
+[HKEY_LOCAL_MACHINE\Software\Microsoft\VisualStudio\9.0\AutomationProperties\VSGesture\Mouse Gesture]
+"Name"="VSGesture.Mouse Gesture"
+"Package"="{51335714-af65-4313-a600-f097643a1134}"
+[HKEY_LOCAL_MACHINE\Software\Microsoft\VisualStudio\9.0\Services\{8fe33e67-b41d-4808-ba2a-f768a5252325}]
+@="{51335714-af65-4313-a600-f097643a1134}"
+"Name"="VSGesture Service"
+

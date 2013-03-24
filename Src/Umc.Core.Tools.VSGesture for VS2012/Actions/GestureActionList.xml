@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<GestureActionList xmlns="http://tempuri.org/GestureActionList.xsd">
+	<GestureItem Name="File.Open" Caption="File Open" Value="File.Open"/>
+	<GestureItem Name="File.Close" Caption="File Close" Value="File.Close"/>
+	<GestureItem Name="Window.CloseAllDocuments" Caption="Close All Documents" Value="Window.CloseAllDocuments"/>
+	<GestureItem Name="Goto.First.Line" Caption="Goto First Line" Value="Edit.Goto" Argument="1"/>
+	<GestureItem Name="Goto.Last.Line" Caption="Goto Last Line" Value="Edit.Goto" Argument="999999999"/>
+	<GestureItem Name="Build.BuildSelection" Caption="Build Selection" Value="Build.BuildSelection"/>
+	<GestureItem Name="Build.BuildSolution" Caption="Build Solution" Value="Build.BuildSolution"/>
+	<GestureItem Name="RightGestureExecuteCommand" Caption="Goto Next Document" Value="Umc.Core.Tools.VSGesture.Actions.RightGestureExecuteCommand"/>
+	<GestureItem Name="Debug.Startnewinstance" Caption="Debug Start New Instance" Value="ClassViewContextMenus.ClassViewProject.Debug.Startnewinstance"/>
+	<GestureItem Name="LeftGestureExecuteCommand" Caption="Goto Previous Document" Value="Umc.Core.Tools.VSGesture.Actions.LeftGestureExecuteCommand"/>
+	<GestureItem Name="Exit" Caption="Exit Visual Studio" Value="File.Exit"/>
+	
+</GestureActionList>

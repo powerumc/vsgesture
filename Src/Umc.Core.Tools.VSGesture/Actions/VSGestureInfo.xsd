@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="GestureActionMapper"
+    targetNamespace="http://tempuri.org/VSGestureInfo.xsd"
+    elementFormDefault="qualified"
+    xmlns="http://tempuri.org/VSGestureInfo.xsd"
+    xmlns:mstns="http://tempuri.org/VSGestureInfo.xsd"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+	<xs:include schemaLocation="GestureActionMapperItems.xsd"></xs:include>
+
+	<xs:element name="VSGestureInfo">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="UserSettings" type="UserSettingsType" />
+				<xs:element name="GestureActionMapper" type="GestureActionMapperType" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:complexType name="UserSettingsType">
+		<xs:sequence>
+			<xs:element name="LineColor" type="xs:string" default="Red" />
+			<xs:element name="LineThickness" type="xs:string" default="Thickness5" />
+			<xs:element name="EnableVSGesture" type="xs:boolean" default="true" />
+			<xs:element name="EnableVSGestureAlram" type="xs:boolean" default="true" />
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="GestureActionMapperType">
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="Gesture" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:attribute name="GestureActionType" type="GestureActionMapperItems" use="required" />
+					<xs:attribute name="ActionType" type="ActionType" use="required" />
+					<xs:attribute name="GestureItemName" use="required" />
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

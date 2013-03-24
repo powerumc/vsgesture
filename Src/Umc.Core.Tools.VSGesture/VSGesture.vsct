@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<Extern href="stdidcmd.h"/>
+	<Extern href="vsshlids.h"/>
+	<Extern href="msobtnid.h"/>
+
+	<Commands package="guidUmc_Core_Tools_VSGesturePkg">
+		<Groups>
+			<Group guid="guidUmc_Core_Tools_VSGestureCmdSet" id="MyMenuGroup" priority="0x0600">
+				<Parent guid="guidSHLMainMenu" id="IDM_VS_MENU_TOOLS"/>
+			</Group>
+		</Groups>
+
+		<Buttons>
+			<!--To define a menu group you have to specify its ID, the parent menu and its display priority. 
+          The command is visible and enabled by default. If you need to change the visibility, status, etc, you can use
+          the CommandFlag node.
+          You can add more than one CommandFlag node e.g.:
+              <CommandFlag>DefaultInvisible</CommandFlag>
+              <CommandFlag>DynamicVisibility</CommandFlag>
+          If you do not want an image next to your command, remove the Icon node or set it to <Icon guid="guidOfficeIcon" id="msotcidNoIcon" /> -->
+
+			<Button guid="guidUmc_Core_Tools_VSGestureCmdSet" id="cmdidVSGesture" priority="0x0001" type="Button">
+				<Parent guid="guidUmc_Core_Tools_VSGestureCmdSet" id="MyMenuGroup" />
+				<Icon guid="guidImages" id="bmpPic1" />
+				<Strings>
+					<CommandName>cmdidVSGesture</CommandName>
+					<ButtonText>VSGesture</ButtonText>
+				</Strings>
+			</Button>
+		</Buttons>
+
+		<Bitmaps>
+			<Bitmap guid="guidImages" href="Resources\Images_32bit.bmp" usedList="bmpPic1, bmpPic2, bmpPicSearch, bmpPicX, bmpPicArrows"/>
+		</Bitmaps>
+	</Commands>
+
+
+
+
+
+	<Symbols>
+		<GuidSymbol name="guidUmc_Core_Tools_VSGesturePkg" value="{51335714-af65-4313-a600-f097643a1134}" />
+		<GuidSymbol name="guidUmc_Core_Tools_VSGestureCmdSet" value="{7c2a4717-faef-462a-b86e-15694b0baba0}">
+			<IDSymbol name="MyMenuGroup" value="0x1020" />
+			<IDSymbol name="cmdidVSGesture" value="0x0100" />
+		</GuidSymbol>
+
+		<GuidSymbol name="guidImages" value="{a44e5a21-3390-4807-aabd-af9787bb0b94}" >
+			<IDSymbol name="bmpPic1" value="1" />
+			<IDSymbol name="bmpPic2" value="2" />
+			<IDSymbol name="bmpPicSearch" value="3" />
+			<IDSymbol name="bmpPicX" value="4" />
+			<IDSymbol name="bmpPicArrows" value="5" />
+		</GuidSymbol>
+	</Symbols>
+
+</CommandTable>

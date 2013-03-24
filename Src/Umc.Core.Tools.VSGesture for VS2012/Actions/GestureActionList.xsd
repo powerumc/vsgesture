@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="GestureActionList"
+    targetNamespace="http://tempuri.org/GestureActionList.xsd"
+    elementFormDefault="qualified"
+    xmlns="http://tempuri.org/GestureActionList.xsd"
+    xmlns:mstns="http://tempuri.org/GestureActionList.xsd"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+	<xs:element name="GestureActionList">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="GestureItem" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:attribute name="Name" use="required" />
+						<xs:attribute name="Caption" use="required" />
+						<xs:attribute name="Value" use="required" />
+						<xs:attribute name="Argument" use="optional"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
