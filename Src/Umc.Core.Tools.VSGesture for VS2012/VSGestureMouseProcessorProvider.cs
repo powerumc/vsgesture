@@ -8,12 +8,12 @@ using System.ComponentModel.Composition;
 
 namespace Umc.Core.Tools.VSGesture
 {
-	[Export(typeof(IMouseProcessorProvider))]
+	[Export(typeof(global::Microsoft.VisualStudio.Text.Editor.IMouseProcessorProvider))]
 	[ContentType("text")]
 	[TextViewRole(PredefinedTextViewRoles.Interactive)]
     [Order(Before = "VisualStudioMouseProcessor")]
 	[Name("VSGesture Mouse Gesturing")]
-	public class VSGestureMouseProcessorProvider : IMouseProcessorProvider
+	public class VSGestureMouseProcessorProvider : global::Microsoft.VisualStudio.Text.Editor.IMouseProcessorProvider
 	{
 	    [Export(typeof(AdornmentLayerDefinition))]
 		[Order(Before = PredefinedAdornmentLayers.Selection)]
@@ -21,8 +21,8 @@ namespace Umc.Core.Tools.VSGesture
 		[Name("VSGestureWindow")]
 		public AdornmentLayerDefinition EditorAdornmentLayer;
 
-	    [ImportMany(typeof (IMouseProcessorProvider))]
-	    public IEnumerable<IMouseProcessorProvider> Providers { get; set; }
+		//[ImportMany(typeof(IMouseProcessorProvider))]
+		//public IEnumerable<IMouseProcessorProvider> Providers { get; set; }
 
 		public IMouseProcessor GetAssociatedProcessor(IWpfTextView wpfTextView)
 		{

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
+	<Metadata>
+		<Identity Id="7228A2F1-C0BE-487D-9134-E45BAA60B3C9" Version="12.0" Language="en-US" Publisher="Junil, Um" />
+		<DisplayName>VSGesture for Visual Studio 2013 Preview</DisplayName>
+		<Description xml:space="preserve">Gesturing at the Visual Studio 2013, 2012, 2010</Description>
+		<MoreInfo>http://blog.powerumc.kr</MoreInfo>
+		<Icon>Resources\Package.ico</Icon>
+		<PreviewImage>Resources\VSGesture.jpg</PreviewImage>
+		<Tags>Gesture, Gesturing, Mouse, POWERUMC, UMC, Editor</Tags>
+	</Metadata>
+	<Installation InstalledByMsi="false">
+		<InstallationTarget Version="12.0" Id="Microsoft.VisualStudio.Pro" />
+		<InstallationTarget Version="11.0" Id="Microsoft.VisualStudio.Pro" />
+		<InstallationTarget Version="10.0" Id="Microsoft.VisualStudio.Pro" />
+	</Installation>
+	<Dependencies>
+		<Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="4.5" />
+		<Dependency Id="Microsoft.VisualStudio.MPF.12.0" DisplayName="Visual Studio MPF 12.0" d:Source="Installed" Version="12.0" />
+	</Dependencies>
+	<Assets>
+		<Asset Type="Microsoft.VisualStudio.MefComponent" d:Source="Project" d:ProjectName="%CurrentProject%" Path="|%CurrentProject%|" />
+		<Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="Project" d:ProjectName="%CurrentProject%" Path="|%CurrentProject%;PkgdefProjectOutputGroup|" />
+	</Assets>
+</PackageManifest>
