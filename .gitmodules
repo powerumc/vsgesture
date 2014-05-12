@@ -1,0 +1,6 @@
+[submodule "extern/jquery.tocify.js"]
+	path = extern/jquery.tocify.js
+	url = git@github.com:gfranko/jquery.tocify.js.git
+[submodule "extern/bootstrap-markdown"]
+	path = extern/bootstrap-markdown
+	url = git@github.com:toopay/bootstrap-markdown.git
