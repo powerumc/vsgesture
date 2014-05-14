@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset='utf-8'/>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1"/>
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="http://gregfranko.com/jquery.tocify.js/css/jquery.ui.all.css" />
+    <link rel="stylesheet" href="http://gregfranko.com/jquery.tocify.js/css/jquery.tocify.css" />
+</head>
+<body>
+
+    <div class="row-fluid">
+        <div id="toc" class="col-md-4"></div>
+        <div id="preview" class="col-md-8"></div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="http://gregfranko.com/jquery.tocify.js/js/jquery.tocify.js"></script>
+
+
+    <script type="text/javascript" src="./js/marked.js"></script>
+    <script type="plain/text" src="./README.md"></script>
+    <script>
+        $(function() {
+
+            function setup(data) {
+                $("#preview").html(data);
+
+                var toc = $("#toc").tocify({ context: "#preview", selectors: "h1, h2, h3, h4", showEffect: "fadeIn"});
+            }
+
+        });
+    </script>
+
+</body>
+</html>
