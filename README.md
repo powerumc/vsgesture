@@ -1,54 +1,34 @@
-What's Markdown ToC
+VSGesture
+=========
+
+VSGesture can execute command via mouse gestures within Visual Studio.
+
+VSGesture for VS2012, 2010 has shipped for OpenSource Code.
+
+If you have any feedback, please send me an email to powerumc at gmail.com or visit http://blog.powerumc.kr.
+
+
+Support Visual Studio
 =====================
+- Visual Studio 2013 Preview
+- Visual Studio 2012
+- Visual Studio 2010
+- Visual Studio 2008
+- Visual Studio 2005
 
-Markdown ToC is a composition library to render the **Markdown Flavored Syntax** and Create the **ToC(Table of Contents)** automatically.
-You're only markdown file, such as readme.md file.
 
-## Method 1. Local Repository
+Screenshot
+==========
+![](http://cfile7.uf.tistory.com/image/131B723A4F54BDC41C7C9D)
 
-1. You can download a zip file at [this link](https://github.com/powerumc/markdown-toc/archive/master.zip).
-2. And unzip a zipfile.
-3. You have to modify a README.md file what contents do you want.
-4. Upload your repository or git commit and push.
 
-## Method 2. GitHub gh-pages branch.
+Download
+========
 
-Github gh-pages branch can host web page on github.com.
+- **VSGesture for VS2013, VS2012, VS2010 is now available for download.**   
+http://blog.powerumc.kr/305  
+http://visualstudiogallery.msdn.microsoft.com/e03c91ff-e20d-4dcc-822b-172a68c40f5b
 
-### 1. Add remote repository the Markdown-ToC
-
-```
-$ git remote add markdown-toc git@github.com:powerumc/markdown-toc.git            # by ssh
-
-$ git remote add markdown-toc https://github.com/powerumc/markdown-toc.git        # by https
-
-```
-
-### 2. Ready in your repository
-
-You should be  new branch is gh-pages without parent branch(--orphan).
-And remove all repository files.
-
-```
-$ git checkout --orphan gh-pages
-
-$ git rm -rf .
-
-$ git pull markdown-toc master:gh-pages
-
-```
-
-### 3. Modify your README.md
-
-All right. Now commit a README.md.
-
-```
-$ git commit -am "init commit."
-```
-
-### 4. Push these
-
-```
-$ git push origin gh-pages
-```
+- **Visual Studio 2005, 2008 version**  
+http://visualstudiogallery.msdn.microsoft.com/en-us/F5007932-0720-492B-8A51-631D5265F6B7
 
