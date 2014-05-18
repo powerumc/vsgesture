@@ -14,11 +14,12 @@ $(function() {
 				var html = marked(data);
 				$("#preview").html(html);
 
-				var toc = $("#toc").tocify({    context: "#preview",
+				var toc = $("#toc").tocify({
+					context: "#preview",
 					selectors: "h1, h2, h3",
 					showEffect: "slideDown",
 					hideEffect: "slideUp",
-					theme: "bootstrap",
+					theme: "jqueryui",
 					hashGenerator: "pretty",
 					highlightOffset: 40});
 
