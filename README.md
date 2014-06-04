@@ -1,3 +1,6 @@
+Junil Um  
+http://blog.powerumc.kr
+
 VSGesture
 =========
 
