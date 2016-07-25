@@ -13,7 +13,8 @@ If you have any feedback, please send me an email to powerumc at gmail.com or vi
 
 Support Visual Studio
 =====================
-- Visual Studio 2013 Preview
+- Visual Studio 2015
+- Visual Studio 2013
 - Visual Studio 2012
 - Visual Studio 2010
 - Visual Studio 2008
