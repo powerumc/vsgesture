@@ -1,0 +1,492 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>15.0</MinimumVisualStudioVersion>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">12.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>12.0</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E3E88BD4-A3CE-48CB-96C0-F15900DDE504}</ProjectGuid>
+    <ProjectTypeGuids>{82b43b9b-a64c-4715-b499-d71e9ca2bd60};{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Umc.Core.Tools.VSGesture</RootNamespace>
+    <AssemblyName>Umc.Core.Tools.VSGesture.v15.0</AssemblyName>
+    <SignAssembly>True</SignAssembly>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="IACOM">
+      <HintPath>..\SharedAssemblies\IACOM.dll</HintPath>
+    </Reference>
+    <Reference Include="IACore">
+      <HintPath>..\SharedAssemblies\IACore.dll</HintPath>
+    </Reference>
+    <Reference Include="IALoader">
+      <HintPath>..\SharedAssemblies\IALoader.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Ink, Version=6.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\SharedAssemblies\Microsoft.Ink.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Ink.Analysis">
+      <HintPath>..\SharedAssemblies\Microsoft.Ink.Analysis.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.CoreUtility, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.Editor, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.OLE.Interop" />
+    <Reference Include="Microsoft.VisualStudio.Shell.Framework, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop" />
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop.8.0" />
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop.9.0" />
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop.10.0" />
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop.11.0">
+      <EmbedInteropTypes>true</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Text.Data, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.Text.Logic, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.Text.UI, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.Text.UI.Wpf, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.TextManager.Interop" />
+    <Reference Include="Microsoft.VisualStudio.Shell.12.0" />
+    <Reference Include="Microsoft.VisualStudio.Shell.Immutable.10.0" />
+    <Reference Include="Microsoft.VisualStudio.Shell.Immutable.11.0" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="EnvDTE">
+      <Guid>{80CC9F66-E7D8-4DDD-85B6-D9E6CD0E93E2}</Guid>
+      <VersionMajor>8</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="EnvDTE80">
+      <Guid>{1A31287A-4D7D-413E-8E32-3B374931BD89}</Guid>
+      <VersionMajor>8</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="EnvDTE90">
+      <Guid>{2CE2370E-D744-4936-A090-3FFFE667B0E1}</Guid>
+      <VersionMajor>9</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.VisualStudio.CommandBars">
+      <Guid>{1CBA492E-7263-47BB-87FE-639000619B15}</Guid>
+      <VersionMajor>8</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\Umc.Core.Tools.VSGesture for VS2012\Actions\ActionCommand.cs">
+      <Link>Actions\ActionCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\Umc.Core.Tools.VSGesture for VS2012\Actions\ActionCommandFactory.cs">
+      <Link>Actions\ActionCommandFactory.cs</Link>
+    </Compile>
+    <Compile Include="..\Umc.Core.Tools.VSGesture for VS2012\Actions\Custom\LeftGestureExecuteCommand.cs">
+      <Link>Actions\Custom\LeftGestureExecuteCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\Umc.Core.Tools.VSGesture for VS2012\Actions\Custom\RightGestureExecuteCommand.cs">
+      <Link>Actions\Custom\RightGestureExecuteCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\Umc.Core.Tools.VSGesture for VS2012\Actions\ExecuteCommand.cs">
+      <Link>Actions\ExecuteCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\Umc.Core.Tools.VSGesture for VS2012\Actions\ExecuteCustomCommand.cs">
+      <Link>Actions\ExecuteCustomCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\Umc.Core.Tools.VSGesture for VS2012\Actions\GestureActionList%28partial%29.cs">
+      <Link>Actions\GestureActionList%28partial%29.cs</Link>
+    </Compile>
+    <Compile Include="..\Umc.Core.Tools.VSGesture for VS2012\Actions\GestureActionList.cs">
+      <Link>Actions\GestureActionList.cs</Link>
+    </Compile>
+    <Compile Include="..\Umc.Core.Tools.VSGesture for VS2012\Actions\IActionCommand.cs">
+      <Link>Actions\IActionCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\Umc.Core.Tools.VSGesture for VS2012\Actions\IExecuteCommand.cs">
+      <Link>Actions\IExecuteCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\Umc.Core.Tools.VSGesture for VS2012\Actions\TempGestureActionMapper.cs">
+      <Link>Actions\TempGestureActionMapper.cs</Link>
+    </Compile>
+    <Compile Include="..\Umc.Core.Tools.VSGesture for VS2012\Actions\VSGestureInfo%28partial%29.cs">
+      <Link>Actions\VSGestureInfo%28partial%29.cs</Link>
+    </Compile>
+    <Compile Include="..\Umc.Core.Tools.VSGesture for VS2012\Actions\VSGestureInfo.cs">
+      <Link>Actions\VSGestureInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\Umc.Core.Tools.VSGesture for VS2012\Controls\ColorPicker.cs">
+      <Link>Controls\ColorPicker.cs</Link>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="..\Umc.Core.Tools.VSGesture for VS2012\Controls\frmWelcome.cs">
+      <Link>Controls\frmWelcome.cs</Link>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="..\Umc.Core.Tools.VSGesture for VS2012\Controls\frmWelcome.Designer.cs">
+      <Link>Controls\frmWelcome.Designer.cs</Link>
+    </Compile>
+    <Compile Include="..\Umc.Core.Tools.VSGesture for VS2012\Controls\LineWeightPicker.cs">
+      <Link>Controls\LineWeightPicker.cs</Link>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="..\Umc.Core.Tools.VSGesture for VS2012\Controls\ListViewEx.cs">
+      <Link>Controls\ListViewEx.cs</Link>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="..\Umc.Core.Tools.VSGesture for VS2012\Controls\PickerBase.cs">
+      <Link>Controls\PickerBase.cs</Link>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="..\Umc.Core.Tools.VSGesture for VS2012\GlobalSuppressions.cs">
+      <Link>GlobalSuppressions.cs</Link>
+    </Compile>
+    <Compile Include="..\Umc.Core.Tools.VSGesture for VS2012\Guids.cs">
+      <Link>Guids.cs</Link>
+    </Compile>
+    <Compile Include="..\Umc.Core.Tools.VSGesture for VS2012\Hook\GlobalEventProvider.cs">
+      <Link>Hook\GlobalEventProvider.cs</Link>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="..\Umc.Core.Tools.VSGesture for VS2012\Hook\HookManager.Callbacks.cs">
+      <Link>Hook\HookManager.Callbacks.cs</Link>
+    </Compile>
+    <Compile Include="..\Umc.Core.Tools.VSGesture for VS2012\Hook\HookManager.cs">
+      <Link>Hook\HookManager.cs</Link>
+    </Compile>
+    <Compile Include="..\Umc.Core.Tools.VSGesture for VS2012\Hook\HookManager.Structures.cs">
+      <Link>Hook\HookManager.Structures.cs</Link>
+    </Compile>
+    <Compile Include="..\Umc.Core.Tools.VSGesture for VS2012\Hook\HookManager.Windows.cs">
+      <Link>Hook\HookManager.Windows.cs</Link>
+    </Compile>
+    <Compile Include="..\Umc.Core.Tools.VSGesture for VS2012\Hook\MouseEventExtArgs.cs">
+      <Link>Hook\MouseEventExtArgs.cs</Link>
+    </Compile>
+    <Compile Include="..\Umc.Core.Tools.VSGesture for VS2012\ImageResources.Designer.cs">
+      <Link>ImageResources.Designer.cs</Link>
+    </Compile>
+    <Compile Include="..\Umc.Core.Tools.VSGesture for VS2012\OptionPages\GestureSeleectedValueConverter.cs">
+      <Link>OptionPages\GestureSeleectedValueConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\Umc.Core.Tools.VSGesture for VS2012\OptionPages\OptionPageAbout.cs">
+      <Link>OptionPages\OptionPageAbout.cs</Link>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="..\Umc.Core.Tools.VSGesture for VS2012\OptionPages\OptionPageAboutControl.cs">
+      <Link>OptionPages\OptionPageAboutControl.cs</Link>
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="..\Umc.Core.Tools.VSGesture for VS2012\OptionPages\OptionPageAboutControl.Designer.cs">
+      <Link>OptionPages\OptionPageAboutControl.Designer.cs</Link>
+    </Compile>
+    <Compile Include="..\Umc.Core.Tools.VSGesture for VS2012\OptionPages\OptionPageDefault.cs">
+      <Link>OptionPages\OptionPageDefault.cs</Link>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="..\Umc.Core.Tools.VSGesture for VS2012\OptionPages\OptionPageDefaultControl.cs">
+      <Link>OptionPages\OptionPageDefaultControl.cs</Link>
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="..\Umc.Core.Tools.VSGesture for VS2012\OptionPages\OptionPageDefaultControl.Designer.cs">
+      <Link>OptionPages\OptionPageDefaultControl.Designer.cs</Link>
+    </Compile>
+    <Compile Include="..\Umc.Core.Tools.VSGesture for VS2012\OptionPages\OptionPageManual.cs">
+      <Link>OptionPages\OptionPageManual.cs</Link>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="..\Umc.Core.Tools.VSGesture for VS2012\OptionPages\OptionPageManualControl.cs">
+      <Link>OptionPages\OptionPageManualControl.cs</Link>
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="..\Umc.Core.Tools.VSGesture for VS2012\OptionPages\OptionPageManualControl.Designer.cs">
+      <Link>OptionPages\OptionPageManualControl.Designer.cs</Link>
+    </Compile>
+    <Compile Include="..\Umc.Core.Tools.VSGesture for VS2012\OptionPages\OptionPageMouseAction.cs">
+      <Link>OptionPages\OptionPageMouseAction.cs</Link>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="..\Umc.Core.Tools.VSGesture for VS2012\OptionPages\OptionPageMouseActionControl.cs">
+      <Link>OptionPages\OptionPageMouseActionControl.cs</Link>
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="..\Umc.Core.Tools.VSGesture for VS2012\OptionPages\OptionPageMouseActionControl.Designer.cs">
+      <Link>OptionPages\OptionPageMouseActionControl.Designer.cs</Link>
+    </Compile>
+    <Compile Include="..\Umc.Core.Tools.VSGesture for VS2012\OptionPages\OptionPageMouseActionControlWPF.xaml.cs">
+      <Link>OptionPages\OptionPageMouseActionControlWPF.xaml.cs</Link>
+    </Compile>
+    <Compile Include="..\Umc.Core.Tools.VSGesture for VS2012\PkgCmdID.cs">
+      <Link>PkgCmdID.cs</Link>
+    </Compile>
+    <Compile Include="..\Umc.Core.Tools.VSGesture for VS2012\Resources.Designer.cs">
+      <Link>Resources.Designer.cs</Link>
+    </Compile>
+    <Compile Include="..\Umc.Core.Tools.VSGesture for VS2012\Services\IVSGestureService.cs">
+      <Link>Services\IVSGestureService.cs</Link>
+    </Compile>
+    <Compile Include="..\Umc.Core.Tools.VSGesture for VS2012\Services\VSGestureService.cs">
+      <Link>Services\VSGestureService.cs</Link>
+    </Compile>
+    <Compile Include="..\Umc.Core.Tools.VSGesture for VS2012\Shell\CancelableMouseEventArgs.cs">
+      <Link>Shell\CancelableMouseEventArgs.cs</Link>
+    </Compile>
+    <Compile Include="..\Umc.Core.Tools.VSGesture for VS2012\Shell\GestureNativeWindow.cs">
+      <Link>Shell\GestureNativeWindow.cs</Link>
+    </Compile>
+    <Compile Include="..\Umc.Core.Tools.VSGesture for VS2012\Shell\GestureWpfWindow.cs">
+      <Link>Shell\GestureWpfWindow.cs</Link>
+    </Compile>
+    <Compile Include="..\Umc.Core.Tools.VSGesture for VS2012\Shell\MENUITEMINFO.cs">
+      <Link>Shell\MENUITEMINFO.cs</Link>
+    </Compile>
+    <Compile Include="..\Umc.Core.Tools.VSGesture for VS2012\Shell\NativeMethods.cs">
+      <Link>Shell\NativeMethods.cs</Link>
+    </Compile>
+    <Compile Include="..\Umc.Core.Tools.VSGesture for VS2012\Shell\RECT.cs">
+      <Link>Shell\RECT.cs</Link>
+    </Compile>
+    <Compile Include="..\Umc.Core.Tools.VSGesture for VS2012\Shell\RunningDocEventImpl.cs">
+      <Link>Shell\RunningDocEventImpl.cs</Link>
+    </Compile>
+    <Compile Include="..\Umc.Core.Tools.VSGesture for VS2012\Shell\SCROLLINFO.cs">
+      <Link>Shell\SCROLLINFO.cs</Link>
+    </Compile>
+    <Compile Include="..\Umc.Core.Tools.VSGesture for VS2012\Shell\SHFILEINFO.cs">
+      <Link>Shell\SHFILEINFO.cs</Link>
+    </Compile>
+    <Compile Include="..\Umc.Core.Tools.VSGesture for VS2012\Shell\Structs.cs">
+      <Link>Shell\Structs.cs</Link>
+    </Compile>
+    <Compile Include="..\Umc.Core.Tools.VSGesture for VS2012\Shell\TV_ITEM.cs">
+      <Link>Shell\TV_ITEM.cs</Link>
+    </Compile>
+    <Compile Include="..\Umc.Core.Tools.VSGesture for VS2012\Shell\VsNativeWindow.cs">
+      <Link>Shell\VsNativeWindow.cs</Link>
+    </Compile>
+    <Compile Include="..\Umc.Core.Tools.VSGesture for VS2012\Util\DteHelper.cs">
+      <Link>Util\DteHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\Umc.Core.Tools.VSGesture for VS2012\Util\FileUtil.cs">
+      <Link>Util\FileUtil.cs</Link>
+    </Compile>
+    <Compile Include="..\Umc.Core.Tools.VSGesture for VS2012\Util\ResourceUtil.cs">
+      <Link>Util\ResourceUtil.cs</Link>
+    </Compile>
+    <Compile Include="..\Umc.Core.Tools.VSGesture for VS2012\VSGestureAnalyzer.cs">
+      <Link>VSGestureAnalyzer.cs</Link>
+    </Compile>
+    <Compile Include="..\Umc.Core.Tools.VSGesture for VS2012\VSGestureInstaller.cs">
+      <Link>VSGestureInstaller.cs</Link>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="..\Umc.Core.Tools.VSGesture for VS2012\VSGestureMouseProcessorProvider.cs">
+      <Link>VSGestureMouseProcessorProvider.cs</Link>
+    </Compile>
+    <Compile Include="..\Umc.Core.Tools.VSGesture for VS2012\VSGesturePackage.cs">
+      <Link>VSGesturePackage.cs</Link>
+    </Compile>
+    <Compile Include="..\Umc.Core.Tools.VSGesture for VS2012\VSGestureVsTextViewCreationListner.cs">
+      <Link>VSGestureVsTextViewCreationListner.cs</Link>
+    </Compile>
+    <Compile Include="..\Umc.Core.Tools.VSGesture for VS2012\VSPackage.Designer.cs">
+      <Link>VSPackage.Designer.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Umc.Core.Tools.VSGesture for VS2012\Actions\GestureActionList.xsd">
+      <Link>Actions\GestureActionList.xsd</Link>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="..\Umc.Core.Tools.VSGesture for VS2012\Actions\GestureActionMapperItems.xsd">
+      <Link>Actions\GestureActionMapperItems.xsd</Link>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="..\Umc.Core.Tools.VSGesture for VS2012\Actions\VSGestureInfo.xsd">
+      <Link>Actions\VSGestureInfo.xsd</Link>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="..\Umc.Core.Tools.VSGesture for VS2012\Key.snk">
+      <Link>Key.snk</Link>
+    </None>
+    <None Include="..\Umc.Core.Tools.VSGesture for VS2012\VSGesture80.reg">
+      <Link>VSGesture80.reg</Link>
+    </None>
+    <None Include="..\Umc.Core.Tools.VSGesture for VS2012\VSGesture90.reg">
+      <Link>VSGesture90.reg</Link>
+    </None>
+    <None Include="source.extension.vsixmanifest">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Circle.jpg" />
+    <Resource Include="Resources\DoubleCircle.jpg" />
+    <Resource Include="Resources\Down.jpg" />
+    <Resource Include="Resources\DownRight.jpg" />
+    <Resource Include="Resources\Images_32bit.bmp" />
+    <Resource Include="Resources\Left.jpg" />
+    <Content Include="Resources\Package.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Resource Include="Resources\Right.jpg" />
+    <Resource Include="Resources\Sample.jpg" />
+    <Resource Include="Resources\ScratchOut.jpg" />
+    <Resource Include="Resources\Up.jpg" />
+    <Resource Include="Resources\UpRight.jpg" />
+    <Content Include="Resources\VSGesture.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <EmbeddedResource Include="..\Umc.Core.Tools.VSGesture for VS2012\Actions\GestureActionList.xml">
+      <Link>Actions\GestureActionList.xml</Link>
+    </EmbeddedResource>
+    <Content Include="..\Umc.Core.Tools.VSGesture for VS2012\VSGesture.vsct">
+      <Link>VSGesture.vsct</Link>
+    </Content>
+    <Content Include="..\Umc.Core.Tools.VSGesture for VS2012\VSGestureInfo.xml">
+      <Link>VSGestureInfo.xml</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="..\Umc.Core.Tools.VSGesture for VS2012\Controls\frmWelcome.resx">
+      <Link>Controls\frmWelcome.resx</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Umc.Core.Tools.VSGesture for VS2012\ImageResources.resx">
+      <Link>ImageResources.resx</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Umc.Core.Tools.VSGesture for VS2012\OptionPages\OptionPageAboutControl.resx">
+      <Link>OptionPages\OptionPageAboutControl.resx</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Umc.Core.Tools.VSGesture for VS2012\OptionPages\OptionPageDefaultControl.resx">
+      <Link>OptionPages\OptionPageDefaultControl.resx</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Umc.Core.Tools.VSGesture for VS2012\OptionPages\OptionPageManualControl.resx">
+      <Link>OptionPages\OptionPageManualControl.resx</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Umc.Core.Tools.VSGesture for VS2012\OptionPages\OptionPageMouseActionControl.resx">
+      <Link>OptionPages\OptionPageMouseActionControl.resx</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Umc.Core.Tools.VSGesture for VS2012\Resources.resx">
+      <Link>Resources.resx</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Umc.Core.Tools.VSGesture for VS2012\VSPackage.resx">
+      <Link>VSPackage.resx</Link>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="..\Umc.Core.Tools.VSGesture for VS2012\OptionPages\OptionPageMouseActionControlWPF.xaml">
+      <Link>OptionPages\OptionPageMouseActionControlWPF.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <PropertyGroup>
+    <UseCodebase>true</UseCodebase>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\VSSDK\Microsoft.VsSDK.targets" Condition="'$(VSToolsPath)' != ''" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
