@@ -50,7 +50,7 @@ namespace Umc.Core.Tools.VSGesture.Controls
 			this.lblLicense.Text	= ". Umc.Core 의 모든 저작권은 www.powerumc.kr 에 있습니다.\r\n"
 									+ ". Umc.Core 는 개인적인 용도로 사용 가능합니다.\r\n"
 									+ ". 본 프로그램은 다른 곳에서 재배포를 할 수 없습니다.\r\n"
-									+ ". 상업용적인 목적으로 사용할 수 없습니다.\r\n";
+									+ ". 상업적인 목적으로 사용할 수 없습니다.\r\n";
 
 			Action<FadeAction> fadeInHandler = new Action<FadeAction>(Fade);
 			IAsyncResult result = fadeInHandler.BeginInvoke(FadeAction.FadeIn, null, fadeInHandler);
