@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
     <Metadata>
-        <Identity Id="445924A8-F8EC-4CC7-B27B-266F6C57EE9B" Version="16.2" Language="en-US" Publisher="엄준일" />
+        <Identity Id="445924A8-F8EC-4CC7-B27B-266F6C57EE9B" Version="16.2.1" Language="en-US" Publisher="엄준일" />
         <DisplayName>VSGesture for Visual Studio 2019</DisplayName>
         <Description xml:space="preserve">Gesturing at the Visual Studio 2019</Description>
         <MoreInfo>http://blog.powerumc.kr</MoreInfo>
@@ -10,7 +10,7 @@
         <Tags>Gesture, Gesturing, Mouse, POWERUMC, UMC, Editor</Tags>
     </Metadata>
     <Prerequisites>
-        <Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[15.0.26208.0,16.0)" DisplayName="Visual Studio 핵심 편집기" />
+        <Prerequisite Id="Microsoft.Net.ComponentGroup.DevelopmentPrerequisites" Version="[16.0.28516.191,17.0)" DisplayName=".NET Framework 4.7.2 개발 도구" />
     </Prerequisites>
     <Installation InstalledByMsi="false">
         <InstallationTarget Version="[15.0,16.0]" Id="Microsoft.VisualStudio.Community" />
