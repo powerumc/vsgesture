@@ -15,12 +15,14 @@ using Umc.Core.Tools.VSGesture.Services;
 using Microsoft.VisualStudio;
 using System.ComponentModel.Composition;
 using Microsoft.VisualStudio.Editor;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace Umc.Core.Tools.VSGesture
 {
     [PackageRegistration(UseManagedResourcesOnly = true)]
 	//[DefaultRegistryRoot("Software\\Microsoft\\VisualStudio\\9.0")]
-    [InstalledProductRegistration(false, "#110", "#112", "1.0", IconResourceID = 400, LanguageIndependentName="Umc.Core.Tools.VSGesture")]
+    [InstalledProductRegistration("#110", "#112", "1.0", IconResourceID = 400, LanguageIndependentName="Umc.Core.Tools.VSGesture")]
     [ProvideLoadKey("Standard", "1.0", "Umc.Core.Tools.VSGesture", "Umc.Core", 1)]
     [ProvideMenuResource(1000, 1)]
     [Guid(GuidList.guidUmc_Core_Tools_VSGesturePkgString)]
@@ -34,25 +36,27 @@ namespace Umc.Core.Tools.VSGesture
 
 	[ProvideService(typeof(IVSGestureService), ServiceName="VSGesture Service")]
 	[ProvideAutoLoad(UIContextGuids.SolutionExists)]
-    public sealed class VSGesturePackage : Package, IVsInstalledProduct
+    public sealed class VSGesturePackage : AsyncPackage, IVsInstalledProduct
     {
         public VSGesturePackage()
         {
             Trace.WriteLine(string.Format(CultureInfo.CurrentCulture, "Entering constructor for: {0}", this.ToString()));
 		}
 
-		#region Initialize
+        #region Initialize
 
-		protected override void Initialize()
+        protected override System.Threading.Tasks.Task InitializeAsync(CancellationToken cancellationToken, IProgress<ServiceProgressData> progress)
         {
-            Trace.WriteLine (string.Format(CultureInfo.CurrentCulture, "Entering Initialize() of: {0}", this.ToString()));
+            Trace.WriteLine(string.Format(CultureInfo.CurrentCulture, "Entering Initialize() of: {0}", this.ToString()));
             base.Initialize();
 
-			initMenu();
+            initMenu();
 
-			initService();
+            initService();
 
-			VSGestureService.Current.Init();
+            VSGestureService.Current.Init();
+
+            return base.InitializeAsync(cancellationToken, progress);
         }
 
 		private void initMenu()
@@ -68,23 +72,23 @@ namespace Umc.Core.Tools.VSGesture
 
 		private void initService()
 		{
-			IServiceContainer container = this as IServiceContainer;
+            IServiceContainer container = this as IAsyncServiceContainer;
 			if( container == null ) return;
 
 			container.AddService(typeof(SVSGestureService),
-				new ServiceCreatorCallback(CreateService),
+				new AsyncServiceCreatorCallback(CreateService),
 				true);
 		}
 
-		public object CreateService(IServiceContainer container, Type serviceType)
+		public System.Threading.Tasks.Task<object> CreateService(IAsyncServiceContainer container, Type serviceType)
 		{
 			if( container != this )
 				return null;
 
 			if (serviceType == typeof(SVSGestureService))
 			{
-				return new VSGestureService(this);
-			}
+                return System.Threading.Tasks.Task.FromResult<object>(new VSGestureService(this));
+            }
 
 			throw new Exception("Null Service");
 		}

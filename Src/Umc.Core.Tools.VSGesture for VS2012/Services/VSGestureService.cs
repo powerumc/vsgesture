@@ -22,17 +22,17 @@ namespace Umc.Core.Tools.VSGesture.Services
 		IVSGestureService,
 		SVSGestureService
 	{
-		private static IVSGestureService instance	= null;
-		private static IVsTextManager manager		= null;
-		private static VSGestureInfo _vsGestureInfo		= null;
+		private static IVSGestureService instance = null;
+		private static IVsTextManager manager = null;
+		private static VSGestureInfo _vsGestureInfo = null;
 		private static GestureActionList _gestureActionList = null;
 
-		private static object lockObj				= new object();
-		private VSGesturePackage package			= null;
+		private static object lockObj = new object();
+		private VSGestureAsyncPackage package = null;
 
 		private VSGestureService() { }
 
-		public VSGestureService(VSGesturePackage package)
+		public VSGestureService(VSGestureAsyncPackage package)
 		{
 			this.package	= package;
 		}
@@ -52,10 +52,6 @@ namespace Umc.Core.Tools.VSGesture.Services
 							{
 								instance = Package.GetGlobalService(typeof(SVSGestureService)) as IVSGestureService;
 								manager = Package.GetGlobalService(typeof(SVsTextManager)) as IVsTextManager;
-
-								// CHANGE
-								//IVsRunningDocumentTable table = Package.GetGlobalService(typeof(SVsRunningDocumentTable)) as IVsRunningDocumentTable;
-								//table.AdviseRunningDocTableEvents(new RunningDocEventImpl(), out RunningDocEventImpl.docCookie);
 							}
 						}
 					}
@@ -64,7 +60,6 @@ namespace Umc.Core.Tools.VSGesture.Services
 				}
 				catch (Exception ex)
 				{
-					File.WriteAllText(@"C:\VSGesture.log", ex.Message);
 					throw;
 				}
 			}
