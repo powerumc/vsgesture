@@ -31,7 +31,7 @@ Screenshot
 Download
 ========
 
-- **VSGesture for VS2013, VS2012, VS2010 is now available for download.**   
+- **VSGesture for VS2019, VS2017, VS2015, VS2013, VS2012, VS2010 is now available for download.**   
 http://blog.powerumc.kr/305  
 http://visualstudiogallery.msdn.microsoft.com/e03c91ff-e20d-4dcc-822b-172a68c40f5b
 
