@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
+    <Metadata>
+        <Identity Id="445924A8-F8EC-4CC7-B27B-266F6C57EE9B" Version="17.0.5" Language="en-US" Publisher="엄준일" />
+        <DisplayName>VSGesture for Visual Studio 2022</DisplayName>
+        <Description xml:space="preserve">Gesturing at the Visual Studio 2022</Description>
+        <MoreInfo>http://blog.powerumc.kr</MoreInfo>
+        <Icon>Resources\Package.ico</Icon>
+        <PreviewImage>Resources\VSGesture.jpg</PreviewImage>
+        <Tags>Gesture, Gesturing, Mouse, POWERUMC, UMC, Editor</Tags>
+    </Metadata>
+    <Prerequisites>
+        <Prerequisite Id="Microsoft.Net.ComponentGroup.DevelopmentPrerequisites" Version="[16.0.28516.191,18.0)" DisplayName=".NET Framework 4.7.2 개발 도구" />
+    </Prerequisites>
+    <Installation InstalledByMsi="false">
+		<InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[15.0,17.0)">
+			<ProductArchitecture>x86</ProductArchitecture>
+		</InstallationTarget>
+		<InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[17.0,18.0)">
+			<ProductArchitecture>amd64</ProductArchitecture>
+		</InstallationTarget>
+		<InstallationTarget Id="Microsoft.VisualStudio.Pro" Version="[15.0,17.0)">
+			<ProductArchitecture>x86</ProductArchitecture>
+		</InstallationTarget>
+		<InstallationTarget Id="Microsoft.VisualStudio.Pro" Version="[17.0,18.0)">
+			<ProductArchitecture>amd64</ProductArchitecture>
+		</InstallationTarget>
+		<InstallationTarget Id="Microsoft.VisualStudio.Enterprise" Version="[15.0,17.0)">
+			<ProductArchitecture>x86</ProductArchitecture>
+		</InstallationTarget>
+		<InstallationTarget Id="Microsoft.VisualStudio.Enterprise" Version="[17.0,18.0)">
+			<ProductArchitecture>amd64</ProductArchitecture>
+		</InstallationTarget>
+    </Installation>
+    <Dependencies>
+        <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="4.6" />
+        <Dependency Id="Microsoft.VisualStudio.MPF.12.0" DisplayName="Visual Studio MPF 12.0" d:Source="Installed" Version="[12.0,17.0)" />
+    </Dependencies>
+    <Assets>
+        <Asset Type="Microsoft.VisualStudio.MefComponent" d:Source="Project" d:ProjectName="%CurrentProject%" Path="|%CurrentProject%|" />
+        <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="Project" d:ProjectName="%CurrentProject%" Path="|%CurrentProject%;PkgdefProjectOutputGroup|" />
+    </Assets>
+</PackageManifest>

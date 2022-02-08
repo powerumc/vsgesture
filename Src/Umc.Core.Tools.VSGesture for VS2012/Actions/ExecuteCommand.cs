@@ -24,7 +24,8 @@ namespace Umc.Core.Tools.VSGesture.Actions
 
 		public void ExecuteLazyCommand()
 		{
-			DTE dte = Package.GetGlobalService(typeof(DTE)) as DTE;
+            ThreadHelper.ThrowIfNotOnUIThread();
+            DTE dte = Package.GetGlobalService(typeof(DTE)) as DTE;
 
 			dte.ExecuteCommand(this.command, this.argument ?? "");
 		}
