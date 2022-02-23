@@ -63,7 +63,7 @@
 			this.lnkBlog.Size = new System.Drawing.Size(143, 12);
 			this.lnkBlog.TabIndex = 1;
 			this.lnkBlog.TabStop = true;
-			this.lnkBlog.Text = "http://blog.powerumc.kr";
+			this.lnkBlog.Text = "https://blog.powerumc.kr";
 			this.lnkBlog.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkBlog_LinkClicked);
 			// 
 			// label3
@@ -83,7 +83,7 @@
 			this.lnkEmail.Size = new System.Drawing.Size(133, 12);
 			this.lnkEmail.TabIndex = 1;
 			this.lnkEmail.TabStop = true;
-			this.lnkEmail.Text = "umc@dotnetxpert.com";
+			this.lnkEmail.Text = "powerumc@gmail.com";
 			this.lnkEmail.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkEmail_LinkClicked);
 			// 
 			// label4
@@ -103,7 +103,7 @@
 			this.linkLabel1.Size = new System.Drawing.Size(160, 12);
 			this.linkLabel1.TabIndex = 1;
 			this.linkLabel1.TabStop = true;
-			this.linkLabel1.Text = ".NETXPERT (닷넷엑스퍼트)";
+			//this.linkLabel1.Text = ".NETXPERT (닷넷엑스퍼트)";
 			this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
 			// 
 			// OptionPageAboutControl
